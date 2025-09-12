@@ -11,7 +11,7 @@ import Admin from "./pages/admin"
 import data from "./data/cv.json"
 
 export default () => (
-    <BrowserRouter>
+    <BrowserRouter basename="/" forceRefresh={false}>
         <Switch>
             <Route exact path="/" component={Index}/>
             <Route path="/cv" component={() => (<Cv data={data}/>)}/>
